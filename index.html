@@ -220,15 +220,15 @@
   .countdown-bar {
     background: rgba(0,168,107,0.08);
     border-bottom: 1px solid rgba(0,168,107,0.2);
-    padding: 16px 48px;
+    padding: 38px 48px;
     display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
   }
   .countdown-item { text-align: center; }
   .countdown-num {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.8rem; color: var(--health-green); line-height: 1;
+    font-size: 5.8rem; color: var(--health-green); line-height: 1;
   }
-  .countdown-lbl { font-family: 'Space Mono', monospace; font-size: .6rem; letter-spacing: .2em; color: var(--gray); text-transform: uppercase; }
+  .countdown-lbl { font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: .2em; color: var(--gray); text-transform: uppercase; }
 
   /* STATS */
   #stats {
@@ -526,6 +526,19 @@
     .local-info { max-width: 100%; }
     .local-actions { grid-template-columns: 1fr !important; }
   }
+  .price1 {
+  font-weight: bold;
+  color: var(--health-green);
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.category-price {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+
 </style>
 </head>
 <body>
@@ -551,7 +564,7 @@
   </ul>
 
   <div class="nav-right">
-    <a href="https://wa.me/5514999999999" target="_blank" rel="noopener" style="color:#25D366; font-size:1.5rem;"><i class="fab fa-whatsapp"></i></a>
+    <!--<a href="https://wa.me/5514999999999" target="_blank" rel="noopener" style="color:#25D366; font-size:1.5rem;"><i class="fab fa-whatsapp"></i></a>-->
     <div class="lang-switcher" role="group" aria-label="Selecionar idioma">
       <button class="lang-btn active" type="button" data-lang-switch="pt" id="btn-pt" aria-pressed="true">PT</button>
       <button class="lang-btn" type="button" data-lang-switch="en" id="btn-en" aria-pressed="false">EN</button>
@@ -609,7 +622,7 @@
       </div>
       <div class="hero-meta-item">
         <div class="label pt">Local</div><div class="label en">Venue</div>
-        <div class="value">HBU — UNIMAR</div>
+        <div class="value">UNIMAR</div>
       </div>
       <div class="hero-meta-item">
         <div class="label">Marília, SP</div>
@@ -667,7 +680,7 @@
 <section id="sobre">
   <div class="sobre-grid">
     <div class="sobre-text">
-      <div class="section-tag reveal">// <span class="pt">Sobre o Evento</span><span class="en">About the Event</span></div>
+      <div class="section-tag reveal"> <span class="pt"></span><span class="en">About the Event</span></div>
       <h2 class="section-title reveal pt">Sobre o<br><span style="color:var(--health-green)">SICS 2026</span></h2>
       <h2 class="section-title reveal en">About<br><span style="color:var(--health-green)">SICS 2026</span></h2>
       <p class="reveal pt">O <strong>II Simpósio Internacional em Ciências da Saúde (SICS 2026)</strong> reúne pesquisadores, médicos, profissionais e estudantes da área da saúde para debater os desafios atuais em Doenças Crônicas e Saúde Mental — tema central desta edição.</p>
@@ -705,7 +718,7 @@
 
 <section id="submissao">
   <div class="container">
-    <div class="section-tag reveal">// <span class="pt">Área Científica</span><span class="en">Scientific Area</span></div>
+    <div class="section-tag reveal"> <span class="pt"></span><span class="en">Scientific Area</span></div>
     <h2 class="section-title reveal">Submissão de <span class="highlight">Trabalhos</span></h2>
     <p class="reveal pt">Prazo: <strong>15/03 a 26/04/2026</strong>. Baixe os modelos oficiais abaixo para formatar o seu resumo acadêmico conforme as regras do evento.</p>
     <p class="reveal en">Deadline: <strong>Mar 15 to Apr 26, 2026</strong>. Download official templates below to format your academic abstract following event rules.</p>
@@ -749,7 +762,7 @@
 
 <section id="areas">
   <div class="container">
-    <div class="section-tag reveal">// <span class="pt">Eixos Temáticos</span><span class="en">Thematic Areas</span></div>
+    <div class="section-tag reveal"> <span class="pt"></span><span class="en">Thematic Areas</span></div>
     <h2 class="section-title reveal pt">Áreas de<br><span style="color:var(--health-green)">Pesquisa</span></h2>
     <h2 class="section-title reveal en">Research<br><span style="color:var(--health-green)">Areas</span></h2>
     <div class="areas-grid" style="margin-top:48px;">
@@ -801,7 +814,7 @@
 
 <section id="programacao">
   <div class="container">
-    <div class="section-tag reveal">// <span class="pt">Agenda Científica</span><span class="en">Scientific Agenda</span></div>
+    <div class="section-tag reveal"> <span class="pt"></span><span class="en">Scientific Agenda</span></div>
     <h2 class="section-title reveal pt">Programação<br><span style="color:var(--health-green)">do Evento</span></h2>
     <h2 class="section-title reveal en">Event<br><span style="color:var(--health-green)">Schedule</span></h2>
   </div>
@@ -993,7 +1006,7 @@
 
 <section id="palestrantes">
   <div class="container">
-    <div class="section-tag reveal">// <span class="pt">Conferencistas Confirmados</span><span class="en">Confirmed Speakers</span></div>
+    <div class="section-tag reveal"> <span class="pt"></span><span class="en">Confirmed Speakers</span></div>
     <h2 class="section-title reveal pt">Palestrantes<br><span style="color:var(--health-green)">Internacionais & Nacionais</span></h2>
     <h2 class="section-title reveal en">International &<br><span style="color:var(--health-green)">National Speakers</span></h2>
   </div>
@@ -1103,7 +1116,7 @@
 
 <section id="inscricao">
   <div class="container">
-    <div class="section-tag reveal">// <span class="pt">Garanta sua Vaga</span><span class="en">Secure Your Spot</span></div>
+    <div class="section-tag reveal"> <span class="pt"></span><span class="en">Secure Your Spot</span></div>
     <h2 class="section-title reveal pt">Inscrições &<br><span style="color:var(--health-green)">Valores</span></h2>
     <h2 class="section-title reveal en">Registration &<br><span style="color:var(--health-green)">Pricing</span></h2>
     <p class="section-lead reveal pt" style="margin-bottom:40px;">1º Lote — vagas limitadas. Após encerramento, os valores serão reajustados.</p>
@@ -1115,7 +1128,7 @@
       <div class="plan-name pt">Acadêmico UNIMAR</div>
       <div class="plan-name en">UNIMAR Student</div>
       <div class="plan-price">
-        <span class="price">R$ 80</span>
+        <span class="price">R$ 100</span>
         <span class="period"> / 1º lote</span>
       </div>
       <ul class="plan-features">
@@ -1132,7 +1145,8 @@
       </ul>
       <p class="plan-note pt">* Apresentação de documento comprobatório obrigatória</p>
       <p class="plan-note en">* Proof of enrollment required</p>
-      <a href="https://lets.4.events/ii-simposio-internacional-em-ciencias-da-saude-C11575E153?autoopen" target="_blank" class="btn-outline pt">Inscrever-se</a>
+      
+      <a href="https://lets.4.events/bilheteria-C11575E153I6c29793a140a811d0c45ce03c1c93a28&autoopen=true" target="_blank" class="btn-outline pt">Inscrever-se</a>
     </div>
 
     <div class="plan-card featured reveal">
@@ -1142,16 +1156,18 @@
       <div class="plan-name pt">Geral — 1º Lote</div>
       <div class="plan-name en">General — 1st Batch</div>
       <div class="plan-price">
-        <span class="price">R$ 130</span>
+       <!--<span class="price">R$ 130</span>-->
         <span class="period"> / 1º lote</span>
       </div>
       <ul class="plan-features">
-        <li class="pt">Estudantes de outras instituições(submissão)</li>
-        <li class="en">Students from other institutions(submission)</li>
-        <li class="pt">Profissionais</li>
-        <li class="en">Professionals</li>
+        <li class="pt">Estudantes de outras IES</> <span class = "price1">R$ 130</span>
+        <li class="en">Students from other institutions</> <span class = "price1">$ 26</span>
+        <li class="pt">Profissionais</> <span class = "price1">R$ 250</span>
+        <li class="en">Professionals</> <span class = "price1">$ 49 </span>
         <li class="pt">Acesso a todas as palestras</li>
         <li class="en">Access to all lectures</li>
+        <li class="pt">Submissão de trabalho</li>
+        <li class="en">Work/poster submission</li>
         <li class="pt">Certificado </li>
         <li class="en">Certificate</li>
         <li class="pt">Coffee breaks</li>
@@ -1184,7 +1200,7 @@
 
 <section id="datas">
   <div class="container">
-    <div class="section-tag reveal">// <span class="pt">Calendário</span><span class="en">Calendar</span></div>
+    <div class="section-tag reveal"> <span class="pt"></span><span class="en">Calendar</span></div>
     <h2 class="section-title reveal pt">Datas<br><span style="color:var(--health-green)">Importantes</span></h2>
     <h2 class="section-title reveal en">Important<br><span style="color:var(--health-green)">Dates</span></h2>
 
@@ -1251,7 +1267,7 @@
 
 <section id="local">
   <div class="container">
-    <div class="section-tag reveal">// <span class="pt">Localização</span><span class="en">Venue</span></div>
+    <div class="section-tag reveal"> <span class="pt"></span><span class="en">Venue</span></div>
     <h2 class="section-title reveal pt">Local do<br><span style="color:var(--health-green)">Evento</span></h2>
     <h2 class="section-title reveal en">Event<br><span style="color:var(--health-green)">Venue</span></h2>
 
@@ -1301,7 +1317,7 @@
   <div class="contato-container">
     <div class="contato-grid">
       <div class="contato-info reveal">
-        <div class="section-tag reveal">// <span class="pt">Fale Conosco</span><span class="en">Contact Us</span></div>
+        <div class="section-tag reveal"> <span class="pt"></span><span class="en">Contact Us</span></div>
         <h2 class="section-title reveal pt">Contato &<br><span style="color:var(--health-green)">Dúvidas</span></h2>
         <h2 class="section-title reveal en">Contact &<br><span style="color:var(--health-green)">Support</span></h2>
         <h3 class="pt">Comissão Organizadora</h3>
