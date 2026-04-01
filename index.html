@@ -1402,19 +1402,23 @@ textarea {
         </div>
       </div>
 
-      <form name="contact" netlify>
-        <p>
-          <label>Name <input type="text" name="name" required /></label>
-        </p>
-        <p>
-          <label>Email <input type="email" name="email" required /></label>
-        </p>
-        <p>
-          <label>Message <textarea name="message" required></textarea></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+      <form name="contact" netlify class="contact-form">
+        <div class="input-container">
+          <label for="name">Seu Nome:</label>
+          <input type="text" name="name" id="name" required placeholder="Digite seu nome">
+        </div>
+        
+        <div class="input-container">
+          <label for="email">Seu E-mail:</label>
+          <input type="email" name="email" id="email" required placeholder="Digite seu e-mail">
+        </div>
+        
+        <div class="input-container">
+          <label for="message">Sua Mensagem:</label>
+          <textarea name="message" id="message" required placeholder="Escreva sua mensagem"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-submit">Enviar Mensagem</button>
       </form>
 </main>
 
