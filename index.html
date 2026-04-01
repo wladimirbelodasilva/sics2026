@@ -539,6 +539,74 @@
 }
 
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1e2a34;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.input-container input,
+.input-container textarea {
+  padding: 5px;
+  border: 1px solid #33f0ff;
+  border-radius: 8px;
+  background-color: #2a3747;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+  border-color: #33f0ff;
+  box-shadow: 0 0 5px rgba(51, 240, 255, 0.5);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.btn-submit {
+  background-color: #05f589;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #29c1d8;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1334,50 +1402,30 @@
         </div>
       </div>
 
-      <div class="reveal">
-        <form class="contato-form" action="https://formsubmit.co/eventos@unimar.br" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="Novo contato - SICS 2026">
-          <input type="hidden" name="_template" value="table">
-
-          <div class="form-group">
-            <label class="pt" for="contact-name">Nome completo</label>
-            <label class="en" for="contact-name">Full name</label>
-            <input id="contact-name" name="Nome" type="text" placeholder="Seu nome / Your name" required>
+      <form name="duvidas" method="POST" data-netlify="true" class="contact-form">
+        <div class="input-container">
+          <label for="nome">Seu Nome:</label>
+          <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+        </div>
+        
+        <form name="duvidas" method="POST" data-netlify="true" class="contact-form">
+          <div class="input-container">
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
           </div>
-
-          <div class="form-group">
-            <label for="contact-email">E-mail</label>
-            <input id="contact-email" name="Email" type="email" placeholder="seu@email.com" required>
+        
+          <div class="input-container">
+            <label for="email">Seu E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
           </div>
-
-          <div class="form-group">
-            <label class="pt" for="contact-subject">Assunto</label>
-            <label class="en" for="contact-subject">Subject</label>
-            <select id="contact-subject" name="Assunto" required>
-              <option value="Inscrições" data-pt="Inscrições" data-en="Registration">Inscrições</option>
-              <option value="Submissão de Trabalhos" data-pt="Submissão de Trabalhos" data-en="Paper Submission">Submissão de Trabalhos</option>
-              <option value="Informações Gerais" data-pt="Informações Gerais" data-en="General Information">Informações Gerais</option>
-              <option value="Patrocínio e Parcerias" data-pt="Patrocínio e Parcerias" data-en="Sponsorship and Partnerships">Patrocínio e Parcerias</option>
-            </select>
+        
+          <div class="input-container">
+            <label for="mensagem">Sua Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required placeholder="Escreva sua mensagem"></textarea>
           </div>
-
-          <div class="form-group">
-            <label class="pt" for="contact-message">Mensagem</label>
-            <label class="en" for="contact-message">Message</label>
-            <textarea id="contact-message" name="Mensagem" placeholder="Sua mensagem... / Your message..." required></textarea>
-          </div>
-
-          <button type="submit" id="contact-submit" class="btn-primary" style="width:100%;padding:14px;border:none;cursor:pointer;">
-            <span class="pt">Enviar Mensagem</span>
-            <span class="en">Send Message</span>
-          </button>
+        
+          <button type="submit" class="btn-submit">Enviar Mensagem</button>
         </form>
-      </div>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer>
