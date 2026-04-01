@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anupam Bishayee — SICS 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --navy: #0d2b4e; --teal: #1db8a0; --health-green: #00a86b;
+    --white: #f5f0eb; --dark: #060f1a; --gray: #8899a6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--dark); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.6; }
+  
+  /* LÓGICA DE IDIOMA */
+  [data-lang="pt"] .en { display: none !important; }
+  [data-lang="en"] .pt { display: none !important; }
+
+  /* HEADER / NAV */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 48px; background: rgba(6,15,26,0.95);
+    border-bottom: 1px solid rgba(0,168,107,0.2);
+  }
+  nav .logo img { height: 40px; }
+  .lang-btn {
+    background: transparent; border: 1px solid rgba(0,168,107,0.5);
+    color: var(--white); padding: 5px 12px; cursor: pointer; border-radius: 3px;
+    font-family: 'Space Mono', monospace; font-size: .7rem;
+  }
+  .lang-btn.active { background: var(--health-green); border-color: var(--health-green); }
+
+  /* PROFILE CONTENT */
+  .profile-container { max-width: 900px; margin: 60px auto; padding: 0 24px; }
+  .profile-header { text-align: center; margin-bottom: 40px; }
+  .profile-img {
+    width: 180px; height: 180px; border-radius: 50%;
+    border: 4px solid var(--health-green); object-fit: cover;
+    margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .profile-name { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--white); letter-spacing: 2px; }
+  .profile-tag { color: var(--health-green); font-family: 'Space Mono', monospace; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; }
+
+  /* SELO STANFORD / ELSEVIER */
+  .award-badge {
+    display: inline-flex; align-items: center; gap: 15px;
+    background: rgba(0, 168, 107, 0.1); border: 1px solid var(--health-green);
+    padding: 12px 20px; border-radius: 50px; margin: 25px 0; text-align: left;
+  }
+  .award-icon {
+    background: var(--health-green); color: var(--dark);
+    width: 35px; height: 35px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+  }
+  .award-text { line-height: 1.2; font-size: 0.85rem; }
+  .award-text strong { color: var(--health-green); display: block; }
+  .award-text small { color: var(--gray); font-size: 0.7rem; display: block; font-family: 'Space Mono', monospace; }
+
+  .bio-card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(0,168,107,0.1);
+    padding: 40px; border-radius: 12px; backdrop-filter: blur(10px);
+  }
+  .bio-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--health-green); margin-bottom: 15px; }
+  .bio-text { color: var(--gray); font-size: 1.05rem; margin-bottom: 30px; text-align: justify; }
+
+  /* LINKS ACADÊMICOS */
+  .academic-links { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+  .btn-academic {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 24px; background: rgba(0,168,107,0.1);
+    border: 1px solid var(--health-green); color: white;
+    text-decoration: none; border-radius: 4px; font-weight: 600;
+    transition: 0.3s; font-size: 0.9rem;
+  }
+  .btn-academic:hover { background: var(--health-green); transform: translateY(-2px); }
+
+  .back-link {
+    display: block; text-align: center; margin-top: 40px;
+    color: var(--gray); text-decoration: none; font-size: 0.8rem;
+    text-transform: uppercase; letter-spacing: 2px;
+  }
+  .back-link:hover { color: var(--health-green); }
+
+  @media (max-width: 600px) {
+    .profile-name { font-size: 2.5rem; }
+    .award-badge { border-radius: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <span class="pt"><img src="assets/images/logos/logo-pt.png" alt="SICS 2026"></span>
+    <span class="en"><img src="assets/images/logos/logo-en.png" alt="SICS 2026"></span>
+  </a>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('pt')" id="btn-pt">PT</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+  </div>
+</nav>
+
+<main class="profile-container">
+  <div class="profile-header">
+    <img src="assets/images/speakers/speaker-5.jpg" class="profile-img" alt="Anupam Bishayee">
+    
+    <h1 class="profile-name">NOME DO PALESTRANTE</h1>
+    
+    <p class="profile-tag">Lake Erie College of Osteopathic Medicine — País EUA</p>
+
+    <div class="award-badge">
+      <div class="award-icon"><i class="fas fa-award"></i></div>
+      <div class="award-text">
+        <span class="pt">Listado entre os <strong>2% cientistas mais influentes do mundo</strong></span>
+        <span class="en">Ranked among the <strong>top 2% most influential scientists worldwide</strong></span>
+        <small>(Elsevier & Stanford University)</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="bio-card">
+    <h3 class="pt">Sobre o Palestrante</h3>
+    <h3 class="en">About the Speaker</h3>
+    
+    <div class="bio-text">
+      <p class="pt">Farmacêutico e Ph.D. em Bioquímica e Quimioprevenção do Câncer, é Professor de Farmacologia e Diretor de Pesquisa do Lake Erie College of Osteopathic Medicine (LECOM), nos Estados Unidos. Reconhecido mundialmente por suas contribuições à pesquisa em produtos naturais, nutracêuticos e prevenção do câncer, possui mais de 320 artigos publicados em periódicos revisados por pares, 22 capítulos de livros e mais de 33 mil citações acadêmicas. Seu índice-h (h-index) no Google Scholar é 95.
+
+        Com trajetória acadêmica que inclui passagens pela University of Medicine and Dentistry of New Jersey (UMDNJ), NEOMED e Larkin University, foi o fundador e presidente de diversos departamentos de Ciências Farmacêuticas nos EUA, além de atuar como revisor e editor de importantes periódicos científicos internacionais. Recebeu financiamento significativo do National Institutes of Health (NIH) para pesquisas voltadas à prevenção e tratamento do câncer por compostos bioativos de plantas como romã, uva, papaia e manga.
+        
+        Atualmente, lidera programas de iniciação científica, orientação de mestrandos e doutorandos, além de projetos colaborativos com instituições nos EUA, Europa, América Latina, África e Ásia. É membro ativo de conselhos editoriais e científicos, incluindo a International Society of Nutrition and Physical Activity on Aging, Obesity and Cancer, e do International Natural Product Sciences Taskforce.
+        
+        Dr. Bishayee é presença frequente em conferências internacionais, tendo ministrado mais de 60 palestras convidadas como keynote speaker em países como Alemanha, Turquia, África do Sul, Índia, Costa Rica, Cuba e Canadá.</p>
+      <p class="en">Dr. Anupam Bishayee is a pharmacist and Ph.D. in Biochemistry and Cancer Chemoprevention. He currently serves as Professor of Pharmacology and Director of Research at Lake Erie College of Osteopathic Medicine (LECOM), United States. Internationally recognized for his contributions to research on natural products, nutraceuticals, and cancer prevention, he has authored over 320 peer-reviewed articles, 22 book chapters, and has accumulated more than 33,000 academic citations, with an h-index of 95 on Google Scholar.
+
+        His academic journey includes positions at the University of Medicine and Dentistry of New Jersey (UMDNJ), NEOMED, and Larkin University. He was the founding chair of several pharmaceutical sciences departments across the U.S. and has served as reviewer and editor for high-impact international scientific journals. He has received substantial funding from the National Institutes of Health (NIH) for studies focused on the cancer-preventive and therapeutic properties of bioactive compounds from plants such as pomegranate, grapes, papaya, and mango.
+        
+        Currently, Dr. Bishayee leads undergraduate and graduate research programs and supervises master’s and doctoral students. He is involved in collaborative projects with institutions across the United States, Europe, Latin America, Africa, and Asia. He is an active member of editorial and scientific boards, including the International Society of Nutrition and Physical Activity on Aging, Obesity and Cancer, and the International Natural Product Sciences Taskforce.
+        
+        Dr. Bishayee is a frequent presence at international conferences, having delivered over 60 invited lectures as a keynote speaker in countries such as Germany, Turkey, South Africa, India, Costa Rica, Cuba, and Canada.</p>
+    </div>
+
+    <div class="academic-links">
+      <a href="https://orcid.org/0000-0001-9159-960X" target="_blank" class="btn-academic">
+        <i class="fab fa-orcid"></i> ORCID
+      </a>
+      <a href="https://scholar.google.com/citations?user=UePjWSkAAAAJ&hl=pt-BR&oi=ao" target="_blank" class="btn-academic">
+        <i class="fas fa-graduation-cap"></i> Google Scholar
+      </a>
+    </div>
+  </div>
+
+  <a href="index.html#palestrantes" class="back-link">
+    <span class="pt">← Voltar para palestrantes</span>
+    <span class="en">← Back to speakers</span>
+  </a>
+</main>
+
+<script>
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    localStorage.setItem('sics-lang', lang);
+  }
+  const savedLang = localStorage.getItem('sics-lang') || 'pt';
+  setLang(savedLang);
+</script>
+
+</body>
+</html>

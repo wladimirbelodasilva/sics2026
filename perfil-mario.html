@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mario Hiroyuki Hirata — SICS 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --navy: #0d2b4e; --teal: #1db8a0; --health-green: #00a86b;
+    --white: #f5f0eb; --dark: #060f1a; --gray: #8899a6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--dark); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.6; }
+  
+  /* LÓGICA DE IDIOMA */
+  [data-lang="pt"] .en { display: none !important; }
+  [data-lang="en"] .pt { display: none !important; }
+
+  /* HEADER / NAV */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 48px; background: rgba(6,15,26,0.95);
+    border-bottom: 1px solid rgba(0,168,107,0.2);
+  }
+  nav .logo img { height: 40px; }
+  .lang-btn {
+    background: transparent; border: 1px solid rgba(0,168,107,0.5);
+    color: var(--white); padding: 5px 12px; cursor: pointer; border-radius: 3px;
+    font-family: 'Space Mono', monospace; font-size: .7rem;
+  }
+  .lang-btn.active { background: var(--health-green); border-color: var(--health-green); }
+
+  /* PROFILE CONTENT */
+  .profile-container { max-width: 900px; margin: 60px auto; padding: 0 24px; }
+  .profile-header { text-align: center; margin-bottom: 40px; }
+  .profile-img {
+    width: 180px; height: 180px; border-radius: 50%;
+    border: 4px solid var(--health-green); object-fit: cover;
+    margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .profile-name { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--white); letter-spacing: 2px; }
+  .profile-tag { color: var(--health-green); font-family: 'Space Mono', monospace; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; }
+
+  /* SELO STANFORD / ELSEVIER */
+  .award-badge {
+    display: inline-flex; align-items: center; gap: 15px;
+    background: rgba(0, 168, 107, 0.1); border: 1px solid var(--health-green);
+    padding: 12px 20px; border-radius: 50px; margin: 25px 0; text-align: left;
+  }
+  .award-icon {
+    background: var(--health-green); color: var(--dark);
+    width: 35px; height: 35px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+  }
+  .award-text { line-height: 1.2; font-size: 0.85rem; }
+  .award-text strong { color: var(--health-green); display: block; }
+  .award-text small { color: var(--gray); font-size: 0.7rem; display: block; font-family: 'Space Mono', monospace; }
+
+  .bio-card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(0,168,107,0.1);
+    padding: 40px; border-radius: 12px; backdrop-filter: blur(10px);
+  }
+  .bio-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--health-green); margin-bottom: 15px; }
+  .bio-text { color: var(--gray); font-size: 1.05rem; margin-bottom: 30px; text-align: justify; }
+
+  /* LINKS ACADÊMICOS */
+  .academic-links { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+  .btn-academic {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 24px; background: rgba(0,168,107,0.1);
+    border: 1px solid var(--health-green); color: white;
+    text-decoration: none; border-radius: 4px; font-weight: 600;
+    transition: 0.3s; font-size: 0.9rem;
+  }
+  .btn-academic:hover { background: var(--health-green); transform: translateY(-2px); }
+
+  .back-link {
+    display: block; text-align: center; margin-top: 40px;
+    color: var(--gray); text-decoration: none; font-size: 0.8rem;
+    text-transform: uppercase; letter-spacing: 2px;
+  }
+  .back-link:hover { color: var(--health-green); }
+
+  @media (max-width: 600px) {
+    .profile-name { font-size: 2.5rem; }
+    .award-badge { border-radius: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <span class="pt"><img src="assets/images/logos/logo-pt.png" alt="SICS 2026"></span>
+    <span class="en"><img src="assets/images/logos/logo-en.png" alt="SICS 2026"></span>
+  </a>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('pt')" id="btn-pt">PT</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+  </div>
+</nav>
+
+<main class="profile-container">
+  <div class="profile-header">
+    <img src="assets/images/speakers/speaker-X.jpg" class="profile-img" alt="Mario Hiroyuki Hirata">
+    
+    <h1 class="profile-name">NOME DO PALESTRANTE</h1>
+    
+    <p class="profile-tag">Faculdade de Ciências Farmacêuticas USP — São Paulo — País 🇧🇷</p>
+
+  
+  </div>
+
+  <div class="bio-card">
+    <h3 class="pt">Sobre o Palestrante</h3>
+    <h3 class="en">About the Speaker</h3>
+    
+    <div class="bio-text">
+      <p class="pt">Dr. Mario Hiroyuki HirataProfessor Titular do Departamento de Análises Clínicas e Toxicológicas da Faculdade de Ciências Farmacêuticas da Universidade de São Paulo (FCF-USP). Possui graduação em Farmácia e Bioquímica e Doutorado em Ciências (Bioquímica) pela mesma instituição, onde consolidou uma carreira de excelência no ensino e pesquisa.É Bolsista de Produtividade em Pesquisa do CNPq e Membro Titular da Academia de Ciências Farmacêuticas do Brasil. Lidera grupos de pesquisa focados em Biologia Molecular aplicada ao diagnóstico e à terapêutica, com ênfase especial no estudo das bases moleculares, epigenéticas e farmacogenéticas de doenças crônico-degenerativas, como a aterosclerose, dislipidemias e diabetes.Sua contribuição científica inclui centenas de artigos publicados em periódicos internacionais e a formação de diversos mestres e doutores. É também coautor do renomado livro "Biologia Molecular", obra fundamental para estudantes e profissionais da área da saúde no Brasil.).</p>
+      <p class="en">Dr. Mario Hiroyuki Hirata is a Full Professor in the Department of Clinical and Toxicological Analyses at the Faculty of Pharmaceutical Sciences of the University of São Paulo (FCF-USP). He holds degrees in Pharmacy and Biochemistry and a PhD in Sciences (Biochemistry) from the same institution, where he has built a distinguished career in teaching and research. He is a CNPq Research Productivity Fellow and a Full Member of the Brazilian Academy of Pharmaceutical Sciences. He leads research groups focused on Molecular Biology applied to diagnosis and therapeutics, with a special emphasis on the study of the molecular, epigenetic, and pharmacogenetic bases of chronic-degenerative diseases, such as atherosclerosis, dyslipidemia, and diabetes. His scientific contributions include hundreds of articles published in international journals and the training of numerous master’s and doctoral students. He is also co-author of the renowned book "Molecular Biology," a fundamental work for students and professionals in the health field in Brazil.</p>
+    </div>
+
+    <div class="academic-links">
+      <a href="https://orcid.org/0000-0002-9521-7979" target="_blank" class="btn-academic">
+        <i class="fab fa-orcid"></i> ORCID
+      </a>
+      <a href="https://scholar.google.com.br/citations?hl=pt-BR&user=n99u3-8AAAAJ" target="_blank" class="btn-academic">
+        <i class="fas fa-graduation-cap"></i> Google Scholar
+      </a>
+    </div>
+  </div>
+
+  <a href="index.html#palestrantes" class="back-link">
+    <span class="pt">← Voltar para palestrantes</span>
+    <span class="en">← Back to speakers</span>
+  </a>
+</main>
+
+<script>
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    localStorage.setItem('sics-lang', lang);
+  }
+  const savedLang = localStorage.getItem('sics-lang') || 'pt';
+  setLang(savedLang);
+</script>
+
+</body>
+</html>
