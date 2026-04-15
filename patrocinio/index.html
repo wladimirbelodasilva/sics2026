@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SICS 2026 — Patrocínio Oficial</title>
+  <meta name="description" content="Seja patrocinador oficial do II SICS 2026. Associe sua marca à ciência, inovação e saúde em um dos principais eventos da região." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0d2b4e;
+      --teal: #1db8a0;
+      --teal-dark: #0f8f7a;
+      --teal-light: #4dd4c0;
+      --health-green: #00a86b;
+      --health-blue: #0055a4;
+      --white: #f5f0eb;
+      --off-white: #e8e2db;
+      --dark: #060f1a;
+      --gray: #8899a6;
+      --accent: #00e5c8;
+      --glass: rgba(255,255,255,0.04);
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.22);
+      --shadow-strong: 0 22px 55px rgba(0,0,0,0.32);
+      --container-max: 1200px;
+      --container-pad: 24px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--dark);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container {
+      width: min(100%, var(--container-max));
+      margin: 0 auto;
+      padding-left: var(--container-pad);
+      padding-right: var(--container-pad);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 32px;
+      background: rgba(6,15,26,0.78);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,168,107,0.25);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .logo-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .logo-wrap strong {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: .04em;
+      line-height: 1;
+    }
+
+    .logo-wrap span {
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      letter-spacing: .14em;
+      color: var(--gray);
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--off-white);
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--health-green); }
+
+    .nav-cta,
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 24px;
+      font-size: .82rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .nav-cta,
+    .btn-primary {
+      background: linear-gradient(135deg, var(--health-green), #08c782);
+      color: white;
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      box-shadow: 0 12px 26px rgba(0,168,107,0.22);
+    }
+
+    .nav-cta:hover,
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.04);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(0,168,107,0.38);
+      color: var(--white);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--health-green);
+      background: rgba(0,168,107,0.08);
+      transform: translateY(-2px);
+    }
+
+    #hero {
+      min-height: 88vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(0,168,107,0.16);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(6,15,26,0.94) 0%, rgba(13,43,78,0.76) 50%, rgba(0,168,107,0.10) 100%),
+        radial-gradient(circle at top right, rgba(0,229,200,0.12), transparent 28%),
+        radial-gradient(circle at left center, rgba(0,85,164,0.18), transparent 30%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 34px;
+      align-items: center;
+      width: min(100%, var(--container-max));
+      margin: 0 auto;
+      padding: 120px var(--container-pad) 80px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(0,168,107,0.15);
+      border: 1px solid rgba(0,168,107,0.35);
+      color: var(--health-green);
+      font-family: 'Space Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1,h2,h3 { line-height: 1; }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 7vw, 6.6rem);
+      letter-spacing: .03em;
+      margin-bottom: 18px;
+      max-width: 10ch;
+    }
+
+    .hero-copy p {
+      max-width: 62ch;
+      color: var(--off-white);
+      font-size: 1.04rem;
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .stat {
+      background: rgba(0,168,107,0.07);
+      border: 1px solid rgba(0,168,107,0.18);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .stat strong {
+      display: block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.1rem;
+      color: var(--health-green);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat span {
+      color: var(--gray);
+      font-size: .9rem;
+    }
+
+    .hero-card {
+      background: rgba(0,168,107,0.08);
+      border: 1px solid rgba(0,168,107,0.18);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: var(--shadow-strong);
+    }
+
+    .hero-card h3,
+    .card h3,
+    .plan h3,
+    .extra h3,
+    .cta-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: .03em;
+    }
+
+    .hero-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      color: var(--health-green);
+    }
+
+    .hero-card ul,
+    .card ul,
+    .plan ul,
+    .extra ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-card li,
+    .card li,
+    .plan li,
+    .extra li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--off-white);
+      line-height: 1.6;
+    }
+
+    .hero-card li::before,
+    .card li::before,
+    .plan li::before,
+    .extra li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--health-green);
+      font-weight: 800;
+    }
+
+    section {
+      padding: 86px 0;
+    }
+
+    .section-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--health-green);
+      margin-bottom: 12px;
+    }
+
+    .section-head {
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.6rem);
+      letter-spacing: .03em;
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--gray);
+      max-width: 70ch;
+      line-height: 1.75;
+    }
+
+    .cards-2,
+    .cards-3,
+    .plans,
+    .extras-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .cards-2 { grid-template-columns: 1.1fr .9fr; }
+    .cards-3 { grid-template-columns: repeat(3, 1fr); }
+
+    .card,
+    .extra,
+    .plan,
+    .cta-card {
+      background: rgba(0,168,107,0.06);
+      border: 1px solid rgba(0,168,107,0.18);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card p,
+    .extra p,
+    .plan .subtitle,
+    .cta-card p {
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      color: var(--accent);
+    }
+
+    .topic {
+      background: rgba(0,168,107,0.05);
+      border: 1px solid rgba(0,168,107,0.16);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    .topic h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      color: var(--accent);
+      letter-spacing: .03em;
+      margin-bottom: 10px;
+    }
+
+    .topic p { color: var(--gray); line-height: 1.65; }
+
+    .plans {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+    }
+
+    .plan {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan.featured {
+      background: rgba(0,168,107,0.14);
+      border-color: var(--health-green);
+      transform: scale(1.04);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .pill {
+      display: inline-flex;
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-family: 'Space Mono', monospace;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .bronze-pill { background: rgba(185,135,90,0.16); color: #deb290; }
+    .silver-pill { background: rgba(217,222,231,0.14); color: #eef2f7; }
+    .gold-pill { background: rgba(245,199,107,0.15); color: #f8d888; }
+
+    .plan h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+
+    .price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: var(--health-green);
+      margin: 12px 0 14px;
+      letter-spacing: .02em;
+    }
+
+    .plan ul { margin-top: 18px; }
+    .plan .btn-primary,
+    .plan .btn-secondary { margin-top: auto; }
+
+    .compare {
+      overflow-x: auto;
+      border-radius: 16px;
+      border: 1px solid rgba(0,168,107,0.18);
+      background: rgba(0,168,107,0.05);
+      box-shadow: var(--shadow-soft);
+    }
+
+    table { width: 100%; min-width: 760px; border-collapse: collapse; }
+    th, td {
+      padding: 18px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(0,168,107,0.12);
+    }
+
+    th {
+      background: rgba(0,168,107,0.1);
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .78rem;
+    }
+
+    td { color: var(--off-white); }
+
+    .extras-grid { grid-template-columns: repeat(2, 1fr); }
+    .extra h3 {
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .extra-price {
+      display: inline-block;
+      margin-top: 14px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--health-green);
+      letter-spacing: .02em;
+    }
+
+    #cta-final {
+      background: linear-gradient(180deg, rgba(0,85,164,0.05), var(--dark));
+    }
+
+    .cta-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .cta-card h3 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      color: var(--off-white);
+      margin: 16px 0 22px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(0,168,107,0.15);
+      padding: 26px 0 34px;
+      color: var(--gray);
+      text-align: center;
+      font-size: .88rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .cards-2,
+      .cards-3,
+      .plans,
+      .extras-grid,
+      .cta-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .plan.featured { transform: none; }
+      .stats { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        padding: 14px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links { gap: 14px; }
+      .hero-grid { padding-top: 96px; }
+      h1 { max-width: unset; }
+      section { padding: 68px 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#hero" class="logo-wrap">
+      <strong>SICS 2026</strong>
+      <span>Patrocínio oficial</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#evento">Evento</a></li>
+      <li><a href="#temas">Temas</a></li>
+      <li><a href="#cotas">Cotas</a></li>
+      <li><a href="#extras">Ativações</a></li>
+      <li><a href="#contato" class="nav-cta">Quero patrocinar</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge">UNIMAR + HBU | Saúde, ciência e inovação</div>
+          <h1>Associe sua marca ao futuro da saúde.</h1>
+          <p>
+            O II SICS – Simpósio Internacional em Ciências da Saúde 2026 reúne pesquisadores, profissionais,
+            estudantes e empresas em um ambiente de alto nível para relacionamento, visibilidade, geração de leads
+            e posicionamento estratégico no setor da saúde.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#cotas">Ver cotas</a>
+            <a class="btn-secondary" href="#contato">Receber proposta</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>600+</strong><span>participantes na edição anterior</span></div>
+            <div class="stat"><strong>300+</strong><span>trabalhos científicos aprovados</span></div>
+            <div class="stat"><strong>4 países</strong><span>conexão internacional e público qualificado</span></div>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h3>Por que patrocinar o SICS?</h3>
+          <ul>
+            <li>Visibilidade qualificada diante de profissionais, pesquisadores, gestores e estudantes da área da saúde.</li>
+            <li>Relacionamento estratégico com universidades, centros de pesquisa, mercado e lideranças regionais.</li>
+            <li>Associação direta da marca com inovação, ciência, pesquisa e impacto social.</li>
+            <li>Possibilidade de ativações com estande, mídia, conteúdo, coleta de leads e ações exclusivas.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="evento">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">Sobre o evento</div>
+          <h2>Um evento que conecta ciência, mercado e sociedade</h2>
+          <p>
+            Após o sucesso da primeira edição, o SICS retorna em 2026 com uma proposta ainda mais abrangente,
+            discutindo doenças crônicas e saúde mental sob perspectivas clínica, tecnológica, interdisciplinar e social.
+          </p>
+        </div>
+        <div class="cards-2">
+          <div class="card">
+            <h3>Sobre o SICS 2026</h3>
+            <p>
+              Realizado pela <strong>Universidade de Marília (UNIMAR)</strong> e pelo <strong>Hospital Beneficente Unimar (HBU)</strong>,
+              o evento reforça o compromisso institucional com produção científica de alto impacto, inovação acadêmica,
+              formação qualificada e transferência de conhecimento para a sociedade.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Destaques do evento</h3>
+            <ul>
+              <li>Palestrantes nacionais e internacionais de relevância científica</li>
+              <li>Debates atuais sobre medicina personalizada, saúde pública e inovação</li>
+              <li>Apresentação de trabalhos científicos e networking qualificado</li>
+              <li>Ambiente estratégico para relacionamento institucional e posicionamento de marca</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="temas">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">Temas centrais</div>
+          <h2>As pautas que movem a edição 2026</h2>
+          <p>Uma programação construída para discutir os principais desafios contemporâneos da saúde com profundidade científica e visão de futuro.</p>
+        </div>
+        <div class="cards-3">
+          <div class="topic"><h3>Doenças crônicas</h3><p>Obesidade, diabetes e estratégias baseadas em evidências para prevenção, tratamento e saúde populacional.</p></div>
+          <div class="topic"><h3>Saúde mental</h3><p>Abordagens integrativas, populações vulneráveis e o impacto da transformação social no cuidado em saúde.</p></div>
+          <div class="topic"><h3>Medicina personalizada</h3><p>Novas possibilidades terapêuticas, diagnóstico orientado por evidências e personalização do cuidado.</p></div>
+          <div class="topic"><h3>IA em saúde</h3><p>Aplicações tecnológicas, inovação acadêmica e ferramentas para suporte clínico e gestão.</p></div>
+          <div class="topic"><h3>Fitoquímicos e estilo de vida</h3><p>Intervenções nutricionais, compostos bioativos e soluções complementares com base científica.</p></div>
+          <div class="topic"><h3>Startups e inclusão tecnológica</h3><p>Ecossistema de inovação, aplicativos em saúde e conexão entre pesquisa, mercado e impacto social.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publico">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">Público-alvo</div>
+          <h2>Uma audiência estratégica para grandes marcas</h2>
+          <p>O SICS atrai um público com alto potencial de relacionamento institucional, visibilidade e geração de negócios.</p>
+        </div>
+        <div class="cards-3">
+          <div class="card"><h3>Educacional</h3><ul><li>Estudantes de graduação e pós-graduação</li><li>Universidades e centros de pesquisa</li><li>Docentes, orientadores e coordenadores</li></ul></div>
+          <div class="card"><h3>Mercado e indústria</h3><ul><li>Indústrias farmacêuticas</li><li>Empresas de biotecnologia</li><li>Fabricantes de equipamentos médicos</li><li>Healthtechs e startups</li></ul></div>
+          <div class="card"><h3>Institucional e governamental</h3><ul><li>Profissionais e gestores da saúde</li><li>Representantes de órgãos públicos</li><li>Tomadores de decisão e lideranças regionais</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cotas">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">Cotas de patrocínio</div>
+          <h2>Escolha o nível de visibilidade da sua marca</h2>
+          <p>Três formatos pensados para diferentes objetivos de branding, relacionamento, ativação e geração de leads.</p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <div class="pill bronze-pill">Cota Bronze</div>
+            <h3>Bronze</h3>
+            <div class="price">R$ 10.000</div>
+            <p class="subtitle">Presença institucional e visibilidade inicial no evento.</p>
+            <ul>
+              <li>1 stand 3x3m</li>
+              <li>Logo no site oficial</li>
+              <li>Material no kit do participante</li>
+              <li>Inserção nas redes sociais</li>
+              <li>1 banner institucional</li>
+              <li>Montagem do stand por conta do patrocinador</li>
+            </ul>
+            <a class="btn-secondary" href="#contato">Tenho interesse</a>
+          </article>
+
+          <article class="plan">
+            <div class="pill silver-pill">Cota Silver</div>
+            <h3>Silver</h3>
+            <div class="price">R$ 15.000</div>
+            <p class="subtitle">Mais exposição, ativação de marca e geração de leads qualificados.</p>
+            <ul>
+              <li>1 stand 4x4m</li>
+              <li>Coletor de leads</li>
+              <li>Material no kit do participante</li>
+              <li>Logo no site oficial</li>
+              <li>Página exclusiva de patrocinador</li>
+              <li>Marca no painel de LED</li>
+              <li>1 banner institucional</li>
+              <li>Montagem do stand por conta do patrocinador</li>
+            </ul>
+            <a class="btn-secondary" href="#contato">Quero esta cota</a>
+          </article>
+
+          <article class="plan featured">
+            <div class="pill gold-pill">Cota Gold</div>
+            <h3>Gold</h3>
+            <div class="price">R$ 20.000</div>
+            <p class="subtitle">Protagonismo, máxima visibilidade e posicionamento premium.</p>
+            <ul>
+              <li>1 stand 6x4m</li>
+              <li>Coletor de leads</li>
+              <li>Material no kit do participante</li>
+              <li>Logo no site oficial</li>
+              <li>Página exclusiva de patrocinador</li>
+              <li>Logo no crachá</li>
+              <li>Marca no painel de LED</li>
+              <li>Marca na comunicação oficial</li>
+              <li>Montagem do stand por conta do patrocinador</li>
+            </ul>
+            <a class="btn-primary" href="#contato">Quero protagonismo</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparativo">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">Comparativo</div>
+          <h2>Visão rápida das entregas</h2>
+          <p>Uma leitura direta para facilitar a escolha da sua empresa.</p>
+        </div>
+        <div class="compare">
+          <table>
+            <thead>
+              <tr><th>Benefícios</th><th>Bronze</th><th>Silver</th><th>Gold</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Stand</td><td>3x3m</td><td>4x4m</td><td>6x4m</td></tr>
+              <tr><td>Logo no site</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+              <tr><td>Material no kit</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+              <tr><td>Coletor de leads</td><td>Não</td><td>Sim</td><td>Sim</td></tr>
+              <tr><td>Página exclusiva</td><td>Não</td><td>Sim</td><td>Sim</td></tr>
+              <tr><td>Painel de LED</td><td>Não</td><td>Sim</td><td>Sim</td></tr>
+              <tr><td>Logo no crachá</td><td>Não</td><td>Não</td><td>Sim</td></tr>
+              <tr><td>Comunicação oficial</td><td>Não</td><td>Não</td><td>Sim</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="extras">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">Ativações extras</div>
+          <h2>Amplie sua presença com entregas complementares</h2>
+          <p>Além das cotas principais, sua marca pode ganhar ainda mais destaque com ativações específicas.</p>
+        </div>
+        <div class="extras-grid">
+          <div class="extra"><h3>Banner no site</h3><p>Presença estratégica na página principal do evento.</p><span class="extra-price">R$ 5.000</span></div>
+          <div class="extra"><h3>Publicação em redes sociais</h3><p>Amplie o alcance da sua marca com posts antes, durante e após o evento.</p><span class="extra-price">R$ 2.000 / publicação</span></div>
+          <div class="extra"><h3>Cordões de crachá</h3><p>Ativação exclusiva com grande circulação visual durante todo o simpósio.</p><span class="extra-price">R$ 7.000 | 1 cota</span></div>
+          <div class="extra"><h3>Crachás</h3><p>Sua marca vinculada diretamente à identificação oficial do evento.</p><span class="extra-price">R$ 5.000 | 1 cota</span></div>
+          <div class="extra"><h3>Telão splash</h3><p>Exibição de vídeo ou animação em ponto nobre de grande visibilidade.</p><span class="extra-price">R$ 2.000</span></div>
+          <div class="extra"><h3>Resultados para sua marca</h3><ul><li>Fortalecimento institucional</li><li>Engajamento com público qualificado</li><li>Relacionamentos comerciais estratégicos</li><li>Associação direta com ciência e inovação</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-final">
+      <div class="container">
+        <div class="cta-wrap">
+          <div class="cta-card">
+            <h3>Vamos construir essa parceria?</h3>
+            <p>
+              Sua empresa pode fazer parte de um dos principais encontros científicos da área da saúde na região,
+              conectando marca, conhecimento, inovação e impacto social em uma experiência memorável.
+            </p>
+          </div>
+          <div class="cta-card" id="contato">
+            <h3>Contato comercial</h3>
+            <div class="contact-list">
+              <span>📩 comercial@sics2026.com.br</span>
+              <span>📞 (14) 0000-0000</span>
+              <span>🌐 www.sicsunimar.com.br/patrocinio</span>
+            </div>
+            <a class="btn-primary" href="mailto:comercial@sics2026.com.br">Solicitar proposta</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    II SICS 2026 — Simpósio Internacional em Ciências da Saúde | Universidade de Marília (UNIMAR) | Hospital Beneficente Unimar (HBU)
+  </footer>
+</body>
+</html>
