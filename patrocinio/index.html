@@ -24,6 +24,33 @@
       --shadow-strong: 0 22px 55px rgba(0,0,0,0.32);
       --container-max: 1200px;
       --container-pad: 24px;
+      /* Logo no header */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+
+.logo-img {
+  max-height: 40px; /* Ajuste conforme necessário */
+  object-fit: contain;
+}
+
+.logo-wrap strong {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+.logo-wrap span {
+  font-family: 'Space Mono', monospace;
+  font-size: .65rem;
+  letter-spacing: .14em;
+  color: var(--gray);
+  text-transform: uppercase;
+}
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -530,6 +557,24 @@
       section { padding: 68px 0; }
     }
 
+
+    #contato { background: rgba(0,85,164,0.05); }
+  .contato-container { max-width: 1200px; margin: 0 auto; }
+  .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .contato-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 24px; color: var(--health-green); }
+  .contact-items { display: flex; flex-direction: column; gap: 14px; }
+  .contact-item { display: flex; gap: 12px; align-items: flex-start; }
+  .contact-icon { font-size: 1.2rem; color: var(--health-green); flex-shrink: 0; margin-top: 2px; }
+  .contact-item a { color: var(--teal); text-decoration: none; transition: color .2s; }
+  .contact-item a:hover { color: var(--accent); }
+  .contato-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; }
+  .form-group label { font-weight: 600; margin-bottom: 6px; font-size: .9rem; }
+  .form-group input, .form-group select, .form-group textarea { background: rgba(0,168,107,0.08); border: 1px solid rgba(0,168,107,0.2); color: var(--white); padding: 11px 14px; border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: .9rem; transition: border-color .2s; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: var(--gray); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--health-green); }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .form-group select option { background: #0a1a2e; }
    
 
 
@@ -538,7 +583,8 @@
 <body>
   <nav>
     <a href="#hero" class="logo-wrap">
-      <img src="assets/images/logo.png" alt="SICS 2026">
+      <img src="assets/images/logo.png" alt="Logo SICS 2026" class="logo-img" />
+      <strong></strong>
       <span>Patrocínio oficial</span>
     </a>
     <ul class="nav-links">
@@ -771,11 +817,14 @@
           <div class="cta-card" id="contato">
             <h3>Contato comercial</h3>
             <div class="contact-list">
-              <span>📩 @sics2026.com.br</span>
-              <span>📞 (14) 99631-5109</span>
+              <span>📩 sics@unimar.br</span>
+              <div class="contact-item">
+                <span class="contact-icon"><i class="fab fa-whatsapp" style="color: #25D366;"></i></span>
+                <span>WhatsApp: <a href="https://wa.me/5514996315113" target="_blank" style="color: #25D366;">+55 (14) 99631-5113</a></span>
+              </div>
               <span>🌐 www.sicsunimar.com.br/patrocinio</span>
             </div>
-            <a class="btn-primary" href="mailto:comercial@sics2026.com.br">Solicitar proposta</a>
+            <a class="btn-primary" href="mailto:sics@unimar.br">Solicitar proposta</a>
           </div>
         </div>
       </div>
